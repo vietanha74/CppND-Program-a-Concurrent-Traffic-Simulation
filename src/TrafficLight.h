@@ -37,6 +37,7 @@ class TrafficLight : public TrafficObject
 public:
     // constructor / desctructor
     TrafficLight();
+    ~TrafficLight();
 
     // getters / setters
     TrafficLightPhase getCurrentPhase();
@@ -49,7 +50,7 @@ public:
 
 private:
     // typical behaviour methods
-    int _currentPhase;
+    TrafficLightPhase _currentPhase;
     void cycleThroughPhases();
 
     // FP.4b : create a private member of type MessageQueue for messages of type TrafficLightPhase 
